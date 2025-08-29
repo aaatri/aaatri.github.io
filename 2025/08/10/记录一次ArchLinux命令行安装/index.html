@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> Arch Linux安装 -  Hexo</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://kira.host/assets/Pictures/Others/116359b4ccf19917.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://kira.host/assets/Pictures/Others/-f0d5cc34c6e5aa7_compressed.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://kira.host/assets/Pictures/Others/20220922230447.jpg" title="John Doe">
+			<img
+				src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>3</div>
+		<div><span>标签</span>5</div>
+		<div><span>分类</span>2</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2408951150&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/1543172148"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/aaaari/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/高中数学/真题解析/">
+              真题解析
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/高中数学/">
+              高中数学
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/ArchLinux/" style="font-size: 10px;">ArchLinux</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90/" style="font-size: 10px;">真题解析</a> <a href="/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">高中数学</a> <a href="/tags/%E9%AB%98%E8%80%83/" style="font-size: 10px;">高考</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			Archive
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">3</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://kira.host/assets/Pictures/Others/-f0d5cc34c6e5aa7_compressed.jpg"
+				data-sizes="auto"
+				alt="Arch Linux安装"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>Arch Linux安装</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年08月10日</a>
+			<a><i class="kirafont icon-edit-fill"></i>948 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+		</div>
+		<html><head></head><body><h1><span id="arch-linux-%E5%AE%89%E8%A3%85">Arch Linux 安装</span></h1><h2><span id="%E8%BF%99%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%98%AFarch-linux%E5%9C%A8biosmbr%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-%E4%B8%8D%E6%98%AFuefi-%E4%BD%A0%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%8A%8A%E8%BF%99%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%BD%93%E5%81%9A%E6%95%99%E7%A8%8B-%E4%BD%86%E6%98%AF%E8%A6%81%E5%AF%B9linux%E6%9C%89%E4%B8%80%E5%AE%9A%E7%9A%84%E7%90%86%E8%A7%A3%E8%83%BD%E5%8A%9B-%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E5%86%99%E7%9A%84%E5%BE%88%E6%B8%85%E6%A5%9A%E4%BA%86-%E5%9F%BA%E6%9C%AC%E4%B8%8A%E4%B8%80%E8%B7%AF%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%8D%B3%E5%8F%AF-%E5%A6%82%E6%9E%9C%E8%BF%99%E9%83%BD%E7%9C%8B%E4%B8%8D%E6%87%82-%E5%8F%AF%E4%BB%A5%E5%9B%9E%E5%8E%BB%E7%94%A8windows%E4%BA%86">这篇博客是Arch Linux，在BIOS+MBR下的安装教程 不是UEFI 你们可以把这篇博客当做教程 但是要对Linux有一定的理解能力 我觉得我写的很清楚了 基本上一路复制粘贴即可 如果这都看不懂 可以回去用Windows了</span></h2><h2><span id="%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE">硬件配置</span></h2><ul>
+<li><strong>CPU</strong>: Intel(R) Atom(TM) D2550 (4 核 @ 1.86 GHz)  </li>
+<li><strong>GPU</strong>: Intel Atom Processor D2xxx/N2xxx Integrated Graphics  </li>
+<li><strong>内存</strong>: DDR3 4GB  </li>
+<li><strong>硬盘</strong>: WDC WDS240G2G0A（西部数据 240GB SATA 固态）  </li>
+<li><strong>引导方式</strong>: BIOS + MBR  </li>
+</ul>
+<hr>
+<h2><span id="%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%BC%95%E5%AF%BC%E8%BF%9B%E5%85%A5%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2">第一步：引导进入安装界面</span></h2><h3><span id="1-%E4%BD%BF%E7%94%A8-u%E7%9B%98%E7%83%A7%E5%BD%95%E9%95%9C%E5%83%8F">1. 使用 U盘烧录镜像</span></h3><ul>
+<li>找到一个 16GB 的U盘</li>
+<li>下载 <code>ArchLinux-x86_64.iso</code> 并烧录到U盘  </li>
+</ul>
+<h3><span id="2-%E8%BF%9B%E5%85%A5-bios-%E5%B9%B6%E9%80%89%E6%8B%A9%E5%90%AF%E5%8A%A8%E9%A1%B9">2. 进入 BIOS 并选择启动项</span></h3><ul>
+<li>开机按 <strong>F12</strong> 进入 BIOS 启动菜单  </li>
+<li>选择 <strong>U盘启动</strong>  </li>
+</ul>
+<h3><span id="3-%E9%80%89%E6%8B%A9-arch-linux-%E5%AE%89%E8%A3%85%E4%BB%8B%E8%B4%A8">3. 选择 Arch Linux 安装介质</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Arch Linux Install Medium (x86_64 BIOS)<br></code></pre></td></tr></tbody></table></figure>
+<hr>
+<h2><span id="%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%AE%89%E8%A3%85%E4%B9%8B%E5%89%8D%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">第二步：安装之前准备工作</span></h2><h3><span id="1-%E5%81%9C%E6%AD%A2-reflector-%E6%9C%8D%E5%8A%A1%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E9%95%9C%E5%83%8F%E5%88%97%E8%A1%A8">1. 停止 reflector 服务（禁止自动更新镜像列表）</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl stop reflector.service<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="2-%E8%BF%9E%E6%8E%A5%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E6%9C%89%E7%BA%BF%E7%94%A8%E6%88%B7%E5%8F%AF%E8%B7%B3%E8%BF%87">2. 连接无线网络（有线用户可跳过）</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iwctl  <span class="hljs-comment"># 进入交互式命令行</span><br></code></pre></td></tr></tbody></table></figure>
+<ul>
+<li>执行以下命令（假设网卡为 <code>wlan0</code>）：<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">device list                   <span class="hljs-comment"># 列出无线设备</span><br>station wlan0 scan            <span class="hljs-comment"># 扫描网络</span><br>station wlan0 get-networks    <span class="hljs-comment"># 显示可用网络（如 Xiaoya_5G）</span><br>station wlan0 connect Xiaoya_5G  <span class="hljs-comment"># 连接网络（输入密码）</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="3%E5%90%8C%E6%AD%A5%E7%BD%91%E7%BB%9C%E6%97%B6%E9%97%B4">3：同步网络时间</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl set-ntp <span class="hljs-literal">true</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="4%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6%E6%BA%90-%E6%8A%8A%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%92%E5%9C%A8%E5%89%8D%E5%88%97">4：修改软件源 把中国的服务器排在前列</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano /etc/pacman.d/mirrorlist<br><span class="hljs-comment">#Ctrl+6 选择（移动光标选择范围）</span><br><span class="hljs-comment">#Ctrl+K 剪切</span><br><span class="hljs-comment">#Ctrl+U 粘贴</span><br><span class="hljs-comment">#Ctrl+X 退出（输入y回车）</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="5%E5%88%B7%E6%96%B0%E4%BD%86%E6%98%AF%E4%B8%8D%E8%A6%81%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85">5：刷新但是不要更新软件包</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -Syyu <span class="hljs-comment">#刷新但是不要更新软件包</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="6%E5%AE%89%E8%A3%85ssh-%E5%92%8Cnet-tools%E5%B9%B6%E5%90%AF%E7%94%A8ssh">6：安装ssh 和net-tools并启用ssh</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -S openssh net-tools<br>systemctl start sshd（非必要）<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="7%E8%AE%BE%E7%BD%AEssh%E5%AF%86%E7%A0%81%E9%9D%9E%E5%BF%85%E8%A6%81">7：设置ssh密码（非必要）</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">passwd<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">### 接下来可以使用ssh连接进行安装或者不用都可以 ip addr查看获取的ip地址</span><br></code></pre></td></tr></tbody></table></figure>
+<h2><span id="%E7%AC%AC%E4%B8%89%E6%AD%A5%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA">第三步：磁盘分区</span></h2><h3><span id="1%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E5%88%97%E8%A1%A8">1：查看磁盘列表</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">fdisk -l<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="2%E5%88%86%E5%8C%BAdevsda">2：分区/dev/sda</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">fdisk /dev/sda<br>o <span class="hljs-comment"># 创建一个新的dos分区表(MBR格式）</span><br>n <span class="hljs-comment"># 创建新分区</span><br>p <span class="hljs-comment"># 查看分区</span><br>w <span class="hljs-comment">#保存退出</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%88%91%E7%9A%84%E5%88%86%E5%8C%BA%E6%83%85%E5%86%B5">我的分区情况</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sda1 ：+40G 作为根目录 /<br>sda3：+4G 作为交换空间 /swap<br>sda2： 一路回车 作为/home目录<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="3%E6%A0%BC%E5%BC%8F%E5%8C%96">3：格式化</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkfs.ext4 /dev/sda1<br>mkfs.ext4 /dev/sda2<br>mkswap /dev/sda3<br>swapon /dev/sda3<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="4%E6%8C%82%E8%BD%BD">4：挂载</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">mount /dev/sda1 /mnt<br><span class="hljs-built_in">mkdir</span> /mnt/home<br>mount /dev/sda2 /mnt/home<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="5%E5%BE%80mnt%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F">5：往/mnt安装系统</span></h3><h4><span id="%E6%9C%80%E5%9F%BA%E7%A1%80%E7%9A%84%E5%9B%9B%E4%B8%AAbase-base-devel-linux-linux-firmware">最基础的四个base base-devel linux linux-firmware</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacstrap /mnt base base-devel linux linux-firmware dhcpcd iwd vim <span class="hljs-built_in">sudo</span> bash-completion nano net-tools openssh man<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="6%E7%94%9F%E6%88%90fstab">6：生成fstab</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">genfstab -p /mnt &gt;&gt; /mnt/etc/fstab<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="7%E5%88%87%E6%8D%A2%E5%88%B0%E5%88%9A%E5%88%9A%E5%AE%89%E8%A3%85%E7%9A%84%E7%B3%BB%E7%BB%9F">7：切换到刚刚安装的系统</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">arch-chroot /mnt<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="8%E7%BC%96%E8%BE%91hostname-%E5%90%8D%E5%AD%97%E8%87%AA%E8%A1%8C%E5%8F%96%E5%90%8D-%E5%A6%82atri-pc%E5%A1%AB%E5%85%A5%E9%87%8C%E9%9D%A2">8：编辑hostname 名字自行取名 如ATRI-PC填入里面</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano /etc/hostname<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="9%E7%BC%96%E8%BE%91hosts">9：编辑hosts</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano /etc/hosts<br><span class="hljs-comment">#追加文本 127.0.1.1 ATRI-PC（注意对齐）</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="10%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA%E4%B8%BA%E4%B8%8A%E6%B5%B7">10：设置时区为上海</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="11%E7%A1%AC%E4%BB%B6%E6%97%B6%E9%97%B4%E8%AE%BE%E7%BD%AE">11：硬件时间设置</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hwclock --systohc<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="12%E7%BC%96%E8%BE%91%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83">12：编辑语言环境</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano /etc/locale.gen<br><span class="hljs-comment"># 把en_US.UTF-8.UTF-8前面的#号删除</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="13%E4%BD%BF%E5%88%9A%E6%89%8D%E7%9A%84%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E7%94%9F%E6%95%88">13：使刚才的语言环境生效</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">locale-gen<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="14%E5%86%99%E5%85%A5%E5%86%85%E5%AE%B9">14：写入内容</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">'LANG=en_US.UTF-8'</span>  &gt; /etc/locale.conf<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="15%E8%AE%BE%E7%BD%AEroot%E5%AF%86%E7%A0%81">15：设置root密码</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">passwd root<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="16%E6%96%B0%E5%BB%BA%E8%B4%A6%E6%88%B7%E5%90%8D%E4%B8%BAatri">16：新建账户名为atri</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">useradd -m -G wheel -s /bin/bash atri<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="17%E8%AE%BE%E7%BD%AEatri%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81">17：设置atri账户密码</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">passwd atri<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="18%E8%AE%BE%E7%BD%AE%E8%B4%A6%E6%88%B7%E6%9D%83%E9%99%90">18：设置账户权限</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EDITOR=nano visudo<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="19%E5%AE%89%E8%A3%85cpu%E5%BE%AE%E7%A0%81%E5%92%8C%E5%BC%95%E5%AF%BC%E8%BD%AF%E4%BB%B6">19：安装CPU微码和引导软件</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -S intel-ucode grub os-prober<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="20%E5%AE%89%E8%A3%85grub%E5%BC%95%E5%AF%BC">20：安装grub引导</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grub-install --target=i386-pc /dev/sda<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="21%E7%94%9F%E6%88%90grub">21：生成grub</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grub-mkconfig -o /boot/grub/grub.cfg<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="22-%E5%AE%89%E8%A3%85kde%E6%A1%8C%E9%9D%A2%E5%AD%97%E4%BD%93%E5%8F%8A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6">22： 安装KDE桌面、字体及常用软件</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -S plasma konsole dolphin ntfs-3g adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts wqy-zenhei wqy-microhei noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-dejavu chromium ark gwenview packagekit-qt5 packagekit appstream-qt appstream  fastfetch net-tools networkmanager git wget<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="23%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8-%E6%A1%8C%E9%9D%A2-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86-ssh">23：开机启动 桌面 网络管理 ssh</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl <span class="hljs-built_in">enable</span> NetworkManager sddm sshd<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="24%E4%BD%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%94%9F%E6%95%88">24：使配置文件生效</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkinitcpio -p linux<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="25%E9%80%80%E5%87%BA">25：退出</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="26%E5%8D%B8%E8%BD%BD%E6%8C%82%E8%BD%BDmnt">26：卸载挂载/mnt</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">umount -R /mnt<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="27%E9%87%8D%E5%90%AF">27：重启</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E8%87%B3%E6%AD%A4%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E9%87%8D%E5%90%AF%E8%BF%9B%E6%A1%8C%E9%9D%A2%E5%90%A7">至此系统安装完毕，重启进桌面吧</span></h3></li>
+</ul>
+<hr>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>John Doe<br>
+        <strong>Link：</strong><a href="http://example.com/2025/08/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1ArchLinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%89%E8%A3%85/" title="http:&#x2F;&#x2F;example.com&#x2F;2025&#x2F;08&#x2F;10&#x2F;记录一次ArchLinux命令行安装&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2025&#x2F;08&#x2F;10&#x2F;记录一次ArchLinux命令行安装&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			    
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/ArchLinux/" rel="tag">ArchLinux</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: 'Arch Linux安装',
+			repo: '-issue repo name-',
+			owner: 'aaatri',
+			admin: 'aaatri',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
